@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+  "name": "es.contix/herramientas",
+  "title": "contix herramientas",
+  "description": "Free no-auth tools for Spain: validate IBAN, EU VAT check (VIES), Modelo 303 sums, Veri*factu dates.",
+  "version": "1.0.0",
+  "websiteUrl": "https://contix.es/herramientas/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.contix.es/api/v1/mcp/herramientas"
+    }
+  ]
+}
