@@ -12,7 +12,7 @@ Streamable HTTP · OAuth 2.1 (dynamic client registration + PKCE) or API key (`A
 
 Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) · API reference: [contix.es/api](https://contix.es/api/) · OpenAPI: `https://api.contix.es/openapi.json`
 
-## All 63 tools
+## All 79 tools
 
 **Invoices**
 
@@ -24,8 +24,10 @@ Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) ·
 - `clone_invoice`: Clone invoice to draft
 - `rectify_invoice`: Rectify invoice (Veri*factu)
 - `cancel_invoice`: Cancel/annul invoice (irreversible) · *asks for confirmation / irreversible*
+- `resubmit_invoice_aeat`: Correct and resend Veri*factu record (subsanación)
 - `delete_invoice`: Delete draft invoice
 - `send_invoice`: Send invoice by email
+- `mark_invoice_sent`: Mark invoice as sent
 
 **Customers and payments**
 
@@ -44,39 +46,53 @@ Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) ·
 
 - `list_quotes`: List quotes · *read-only*
 - `create_quote`: Create quote
+- `update_quote`: Update quote
 - `send_quote`: Send a quote by email
+- `mark_quote_sent`: Mark quote as sent
 - `convert_quote_to_invoice`: Convert quote to invoice
 - `list_recurring`: List recurring profiles · *read-only*
 - `create_recurring`: Create recurring profile
 - `generate_recurring`: Generate invoice from recurring profile
 
-**Expenses and suppliers**
+**Expenses, suppliers and bank**
 
 - `list_expenses`: List expenses · *read-only*
 - `create_expense`: Create expense
 - `update_expense`: Edit expense
 - `delete_expense`: Delete expense
+- `attach_expense_receipt`: Attach receipt to expense
 - `list_suppliers`: List suppliers · *read-only*
+- `list_bank_imports`: List bank imports · *read-only*
+- `delete_bank_transactions`: Delete bank movements
+- `list_bank_trash`: Bank trash · *read-only*
+- `restore_bank_trash`: Restore bank movements
 
 **Tax figures and public administration**
 
 - `get_modelo`: Get AEAT tax model (modelo) · *read-only*
+- `get_libros_registro`: Libros registro (facturas expedidas / recibidas) · *read-only*
 - `check_period`: Check a period before handing it over · *read-only*
 - `get_invoice_facturae`: Get Facturae XML (B2G) · *read-only*
 - `submit_invoice_to_face`: Submit invoice to FACe (B2G)
 - `get_face_status`: Get FACe status (B2G) · *read-only*
 - `calculate_modelo_303`: Sum the Spanish VAT return (Modelo 303) · *read-only*
+- `calculate_vat`: Calculate VAT (IVA) and IRPF withholding · *read-only*
 - `get_obligation_dates`: Veri*factu and e-invoicing deadlines (Spain) · *read-only*
 - `validate_iban`: Validate an IBAN · *read-only*
+- `validate_spanish_tax_id`: Calculate/validate a Spanish DNI, NIE or CIF check character · *read-only*
 
 **Settings**
 
 - `get_invoice_series`: Get invoice series/numbering · *read-only*
 - `set_invoice_series`: Set invoice series/numbering
+- `get_quote_series`: Get quote numbering · *read-only*
+- `set_quote_series`: Set quote start number
 - `get_invoice_defaults`: Get invoice defaults · *read-only*
 - `set_invoice_defaults`: Set invoice defaults
 - `get_invoice_footer`: Get invoice footer · *read-only*
 - `set_invoice_footer`: Set invoice footer
+- `get_invoice_display`: Get invoice display options · *read-only*
+- `set_invoice_display`: Set invoice display options
 - `get_product_groups`: Get product groups · *read-only*
 - `set_product_groups`: Set product groups
 - `get_subscription_status`: Get subscription/trial status · *read-only*
@@ -102,7 +118,7 @@ The MCP server, the REST API and the web panel run on the same engine. The live 
 
 ## Free tools without an account
 
-A second, smaller server with four read-only tools, no account and no auth:
+A second, smaller server with six read-only tools, no account and no auth:
 
 ```
 https://api.contix.es/api/v1/mcp/herramientas
@@ -112,6 +128,8 @@ https://api.contix.es/api/v1/mcp/herramientas
 - `check_vat_number`: EU VAT number lookup in the European Commission's VIES registry.
 - `calculate_modelo_303`: sums the boxes of the Spanish quarterly VAT return with the formulas of the official AEAT form.
 - `get_obligation_dates`: Veri\*factu and mandatory B2B e-invoicing dates from the published rules.
+- `calculate_vat`: base, VAT (IVA), optional recargo de equivalencia and IRPF withholding from an amount, also backwards from a total. It applies the rates it is given and does not choose one.
+- `validate_spanish_tax_id`: check character of a Spanish DNI, NIE or CIF; with 1 to 8 digits it computes the DNI letter.
 
 Same tools as a REST API without key: `https://api.contix.es/api/v1/herramientas` ([docs](https://contix.es/api/#herramientas)). In the browser: [contix.es/herramientas](https://contix.es/herramientas/).
 
