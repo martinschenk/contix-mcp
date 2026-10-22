@@ -1,0 +1,19 @@
+{
+  "name": "contix",
+  "owner": {
+    "name": "contix (Martin Schenk S.L.)",
+    "email": "martin@contix.es"
+  },
+  "metadata": {
+    "description": "contix plugin for Claude: Spanish invoicing with Veri*factu."
+  },
+  "plugins": [
+    {
+      "name": "contix",
+      "source": "./plugin",
+      "description": "Spanish invoicing with Veri*factu from your AI assistant: customers, invoices, payments, expenses, quotes, recurring invoices, Facturae/FACe and Modelo 303 figures. Plus free IBAN, EU VAT and Modelo 303 tools without an account.",
+      "category": "productivity",
+      "homepage": "https://contix.es"
+    }
+  ]
+}

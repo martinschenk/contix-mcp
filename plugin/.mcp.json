@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "contix": {
+      "type": "http",
+      "url": "https://api.contix.es/api/v1/mcp"
+    },
+    "contix-herramientas": {
+      "type": "http",
+      "url": "https://api.contix.es/api/v1/mcp/herramientas"
+    }
+  }
+}

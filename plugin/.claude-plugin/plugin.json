@@ -1,0 +1,20 @@
+{
+  "name": "contix",
+  "version": "0.2.0",
+  "description": "Spanish invoicing with Veri*factu from your AI assistant: customers, invoices, payments, expenses, quotes, recurring invoices, Facturae/FACe and Modelo 303 figures. Plus free IBAN, EU VAT and Modelo 303 tools without an account.",
+  "author": {
+    "name": "contix (Martin Schenk S.L.)",
+    "email": "martin@contix.es",
+    "url": "https://contix.es"
+  },
+  "homepage": "https://contix.es",
+  "repository": "https://github.com/martinschenk/contix-mcp",
+  "license": "MIT",
+  "keywords": ["invoicing", "verifactu", "spain", "facturae", "face", "modelo 303", "autonomos", "iban", "vies"],
+  "icon": ".claude-plugin/icon.png",
+  "displayName": "contix",
+  "privacyPolicyUrl": "https://contix.es/legal/privacidad/",
+  "termsOfServiceUrl": "https://contix.es/legal/terminos/",
+  "documentationUrl": "https://contix.es/mcp/",
+  "supportUrl": "https://contix.es/contacto/"
+}

@@ -115,6 +115,14 @@ https://api.contix.es/api/v1/mcp/herramientas
 
 Same tools as a REST API without key: `https://api.contix.es/api/v1/herramientas` ([docs](https://contix.es/api/#herramientas)). In the browser: [contix.es/herramientas](https://contix.es/herramientas/).
 
+## Claude Code plugin
+
+Both servers plus a short skill on when to use them, in one step:
+
+```
+/plugin install contix --marketplace martinschenk/contix-mcp
+```
+
 ## Configuration
 
 ```json
