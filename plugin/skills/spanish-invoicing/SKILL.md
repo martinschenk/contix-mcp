@@ -10,6 +10,9 @@ computes figures; it does not give tax advice. What is correct for taxes the use
 decides with their gestoría or tax adviser. Never suggest which rate, value or
 form someone should use.
 
+Work in the user's language, whatever it is. Tool names and fields are English,
+the data stays as the user entered it; explain results in the user's language.
+
 1. **No account needed:** `contix-herramientas` checks an IBAN (`validate_iban`),
    an EU VAT number in VIES (`check_vat_number`), computes Modelo 303 figures from
    amounts the user gives (`calculate_modelo_303`) and lists AEAT filing dates

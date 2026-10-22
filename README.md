@@ -2,7 +2,7 @@
 
 # contix MCP server: Spanish invoicing with Veri*factu
 
-Run your Spanish invoicing from Claude, ChatGPT, Cursor or any MCP client: customers, invoices with the Veri\*factu hash chain and QR, payments, expenses, quotes, recurring invoices, Facturae/FACe for the public administration, Modelo 303/349/390 figures, and a workspace for your accountant (gestoría). Hosted by [contix](https://contix.es), nothing to install. This repository holds the public metadata; the server code is not open source.
+Run your Spanish invoicing from Claude, ChatGPT, Cursor or any MCP client: customers, invoices with the Veri\*factu hash chain and QR, payments, expenses, quotes, recurring invoices, Facturae/FACe for the public administration, Modelo 303/349/390 figures, and a workspace for your accountant (gestoría). Hosted by [contix](https://contix.es), nothing to install. Works in any language your assistant speaks; the contix panel itself is in Spanish, English and German. This repository holds the public metadata; the server code is not open source.
 
 ```
 https://api.contix.es/api/v1/mcp
