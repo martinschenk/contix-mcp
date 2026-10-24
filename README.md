@@ -12,7 +12,7 @@ Streamable HTTP · OAuth 2.1 (dynamic client registration + PKCE) or API key (`A
 
 Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) · API reference: [contix.es/api](https://contix.es/api/) · OpenAPI: `https://api.contix.es/openapi.json`
 
-## All 79 tools
+## All 80 tools
 
 **Invoices**
 
@@ -52,6 +52,7 @@ Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) ·
 - `convert_quote_to_invoice`: Convert quote to invoice
 - `list_recurring`: List recurring profiles · *read-only*
 - `create_recurring`: Create recurring profile
+- `update_recurring`: Update recurring profile
 - `generate_recurring`: Generate invoice from recurring profile
 
 **Expenses, suppliers and bank**
@@ -113,8 +114,6 @@ Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) ·
 - `gestoria_cierre_config`: Quarter-close reminders: current settings · *read-only*
 - `gestoria_cierre_configurar`: Quarter-close reminders: change settings
 - `gestoria_cierre_vista_previa`: Quarter-close reminder: preview for one client · *read-only*
-
-The MCP server, the REST API and the web panel run on the same engine. The live list is `tools/list` on the endpoint.
 
 ## Free tools without an account
 
