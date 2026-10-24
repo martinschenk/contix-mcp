@@ -115,6 +115,8 @@ Setup for Claude, ChatGPT and Cursor: [contix.es/mcp](https://contix.es/mcp/) ·
 - `gestoria_cierre_configurar`: Quarter-close reminders: change settings
 - `gestoria_cierre_vista_previa`: Quarter-close reminder: preview for one client · *read-only*
 
+The MCP server, the REST API and the web panel run on the same engine. The live list is `tools/list` on the endpoint.
+
 ## Free tools without an account
 
 A second, smaller server with six read-only tools, no account and no auth:
